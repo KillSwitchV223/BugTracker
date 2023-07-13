@@ -1,0 +1,27 @@
+<!-- edit_bug.html -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Edit Bug</title>
+</head>
+<body>
+    <h1>Edit Bug</h1>
+    <form method="POST" action="{{ url_for('update_bug', bug_id=bug.id) }}">
+        <label for="title">Title:</label>
+        <input type="text" id="title" name="title" value="{{ bug.title }}"><br><br>
+
+        <label for="description">Description:</label>
+        <textarea id="description" name="description">{{ bug.description }}</textarea><br><br>
+
+        <label for="status">Status:</label>
+        <input type="text" id="status" name="status" value="{{ bug.status }}"><br><br>
+
+        <label for="assigned_to">Assigned To:</label>
+        <input type="text" id="assigned_to" name="assigned_to" value="{{ bug.assigned_to }}"><br><br>
+
+        <input type="submit" value="Update">
+    </form>
+</body>
+</html>
+i 
